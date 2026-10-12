@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">SHOHRUH Gold Logo</title>
+  <desc id="desc">Luxury gold S monogram with SHOHRUH wordmark on a transparent background.</desc>
+
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8f5b12"/>
+      <stop offset="22%" stop-color="#ffd86a"/>
+      <stop offset="48%" stop-color="#fff1a8"/>
+      <stop offset="72%" stop-color="#d99a24"/>
+      <stop offset="100%" stop-color="#7b4809"/>
+    </linearGradient>
+    <linearGradient id="gold2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a86713"/>
+      <stop offset="50%" stop-color="#ffe58a"/>
+      <stop offset="100%" stop-color="#b87816"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <!-- Transparent background; suitable for website headers -->
+
+  <!-- subtle glow -->
+  <ellipse cx="600" cy="390" rx="270" ry="210" fill="#e5a52c" opacity=".10" filter="url(#softGlow)"/>
+
+  <!-- S monogram -->
+  <g filter="url(#glow)">
+    <path d="M790 210
+             C745 160 680 135 606 138
+             C515 142 446 182 435 241
+             C423 304 474 335 558 357
+             C644 380 710 394 711 442
+             C712 493 653 526 589 526
+             C526 526 473 502 430 459
+             L430 555
+             C479 594 535 613 603 613
+             C706 613 785 562 798 490
+             C812 410 748 376 653 350
+             C571 327 520 310 522 271
+             C524 237 562 215 610 215
+             C676 215 726 239 790 285 Z"
+          fill="url(#gold)"/>
+    <path d="M430 555 C477 594 535 613 603 613
+             C706 613 785 562 798 490
+             C811 417 760 382 690 361"
+          fill="none" stroke="#fff0a0" stroke-width="5" opacity=".65"/>
+    <path d="M790 210 C745 160 680 135 606 138
+             C515 142 446 182 435 241"
+          fill="none" stroke="#fff0a0" stroke-width="5" opacity=".7"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="600" y="700"
+        text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="112"
+        font-weight="700"
+        letter-spacing="18"
+        fill="url(#gold2)">SHOHRUH</text>
+
+  <!-- ornament -->
+  <line x1="350" y1="755" x2="555" y2="755" stroke="url(#gold2)" stroke-width="4"/>
+  <line x1="645" y1="755" x2="850" y2="755" stroke="url(#gold2)" stroke-width="4"/>
+  <path d="M600 736 L616 755 L600 774 L584 755 Z" fill="url(#gold2)"/>
+
+  <!-- small highlight -->
+  <circle cx="600" cy="755" r="3.5" fill="#fff2ad"/>
+</svg>
