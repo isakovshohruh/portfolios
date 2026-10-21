@@ -912,18 +912,15 @@ header {
 
 .family-btn {
   position: absolute;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
-  width: 55px;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 10px 30px;
   border: 1px solid #00ff41;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.85);
   color: #00ff41;
   font-size: 42px;
+  text-align: center;
   text-decoration: none;
   transition: 0.3s ease;
   z-index: 10;
