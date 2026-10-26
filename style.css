@@ -824,134 +824,151 @@ header {
   text-transform: uppercase;
 }
 
-/* ========================================
-   FAMILY SLIDER
-======================================== */
 .family {
   width: 100%;
-  padding: 80px 20px 110px;
-}
-
-.family-container {
-  width: 100%;
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 50px;
-  background: rgba(0, 0, 0, 0.9);
-  border: 1px solid #00ff41;
-  border-radius: 30px;
-  box-shadow:
-    0 0 30px rgba(0, 255, 65, 0.12),
-    inset 0 0 40px rgba(0, 255, 65, 0.03);
+  padding: 70px 5%;
+  background: #050805;
+  overflow: hidden;
 }
 
 .family-title {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
-.family-title span {
-  display: block;
-  margin-bottom: 10px;
-  color: #00ff41;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 5px;
-  text-shadow: 0 0 10px #00ff41;
-}
+
 .family-title h2 {
-  margin: 0;
-  color: #fff;
+  color: white;
   font-size: 42px;
-  font-weight: 800;
-  text-transform: uppercase;
+  margin-bottom: 15px;
 }
-.family-title h2 strong {
-  color: #00ff41;
-  text-shadow:
-    0 0 10px #00ff41,
-    0 0 25px #00ff41;
+
+.family-title h2 span {
+  color: #39ff14;
+  text-shadow: 0 0 15px #39ff14;
 }
+
 .family-title p {
-  margin-top: 12px;
-  color: #888;
-  font-size: 15px;
+  color: #ccc;
+  font-size: 17px;
 }
 
 .family-slider {
   position: relative;
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: 500px;
-  overflow: hidden;
-  background: #050505;
-  border: 1px solid rgba(0, 255, 65, 0.45);
-  border-radius: 20px;
-  box-shadow: 0 0 25px rgba(0, 255, 65, 0.1);
-}
-.family-slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s ease;
-}
-.family-slide:target,
-.family-slide.active {
-  opacity: 1;
-  pointer-events: auto;
 }
 
-.family-slide img {
-  display: block;
+.family-track {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  background: #050505;
+  padding: 10px 5px 25px;
+
+  scrollbar-width: none;
+}
+
+.family-track::-webkit-scrollbar {
+  display: none;
+}
+
+.family-card {
+  min-width: 300px;
+  height: 360px;
+  background: #080d08;
+  border: 2px solid #39ff14;
   border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  scroll-snap-align: center;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+  transition: 0.3s;
+}
+
+.family-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(57, 255, 20, 0.5);
+}
+
+.family-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.family-card h3 {
+  color: white;
+  font-size: 22px;
+  margin: 15px 0 5px;
+}
+
+.family-card p {
+  color: #aaa;
+  margin: 0;
 }
 
 .family-btn {
   position: absolute;
-  top: 60%;
-  transform: translateY(-50%);
-  padding: 10px 30px;
-  border: 1px solid #00ff41;
+  z-index: 5;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #39ff14;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.85);
-  color: #00ff41;
-  font-size: 42px;
-  text-align: center;
-  text-decoration: none;
-  transition: 0.3s ease;
-  z-index: 10;
-}
-.family-btn:hover {
-  background: #00ff41;
-  color: #000;
-  box-shadow:
-    0 0 15px #00ff41,
-    0 0 35px rgba(0, 255, 65, 0.5);
-  transform: translateY(-50%) scale(1.1);
-}
-.family-prev {
-  left: 25px;
-}
-.family-next {
-  right: 25px;
+  background: #050805;
+  color: #39ff14;
+  font-size: 35px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.family-counter {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 25px;
-  color: #555;
-  font-size: 18px;
-  font-weight: bold;
+.family-btn:hover {
+  background: #39ff14;
+  color: black;
+  box-shadow: 0 0 20px #39ff14;
 }
-.family-counter span:first-child {
-  color: #00ff41;
-  text-shadow: 0 0 10px #00ff41;
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* Telefon */
+@media (max-width: 600px) {
+  .family {
+    padding: 50px 15px;
+  }
+
+  .family-title h2 {
+    font-size: 30px;
+  }
+
+  .family-title p {
+    font-size: 14px;
+  }
+
+  .family-card {
+    min-width: 270px;
+    height: 330px;
+  }
+
+  .family-card img {
+    height: 220px;
+  }
+
+  .family-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+  }
 }
 
 .gc {

@@ -189,57 +189,70 @@
           </div>
         </div>
       </section>
+      <section class="family" id="family">
+        <div class="family-title">
+          <h2>MENING <span>OILAM</span></h2>
+          <p>Oilam — mening baxtim va eng katta tayanchim.</p>
+        </div>
 
-      <!-- MY FAMILY SECTION -->
-      <section id="family" class="family">
-        <div class="family-container">
-          <div class="family-title">
-            <span>02</span>
-            <h2>BU MENING <strong>OILAM</strong></h2>
-            <p>Men uchun eng qadrli insonlar</p>
-          </div>
+        <div class="family-slider">
+          <button class="family-btn prev" onclick="prevFamily()">‹</button>
 
-          <div class="family-slider">
-            <!-- 1-RASM -->
-            <div id="family1" class="family-slide active">
-              <img class="rasm" src="./image.png" alt="singlim" />
-              <a href="#family4" class="family-btn family-prev">‹</a>
-              <a href="#family2" class="family-btn family-next">›</a>
-              <h3>Bu mening singlim</h3>
+          <div class="family-track">
+            <div class="family-card">
+              <img src="./photo_5389048891572952336_y.jpg" alt="Otam" />
+              <h3>Adam</h3>
+              <p>Isimlari Farxod.Hozirda 42yoshdalar.Ular ishlaydilar</p>
+            </div>
+
+            <div class="family-card">
+              <img src="./photo_5343981950059880326_x.jpg" alt="Akam" />
+              <h3>Akam</h3>
+              <p>Isimlari Farrux Akam hozirda 19 yoshdalar.Ular ishlaydilar</p>
+            </div>
+
+            <div class="family-card">
+              <img src="./shoxrux photo.png" alt="Shohruh" />
+              <h3>Men</h3>
+              <p>Men 13yoshdaman.Men hozirda O'qiyman</p>
+            </div>
+
+            <div class="family-card">
+              <img src="./photo_5343981950059880302_x.jpg" alt="Akam" />
+              <h3>Onam</h3>
               <p>
-                Singlimning ismi Ezoza, hozirda u 7 yoshda va maktabda o'qiydi.
+                Isimlari Nargiza.Hozirda 40 yoshdala. Ular hozir ishlaydilar
               </p>
             </div>
 
-            <!-- 2-RASM -->
-            <div id="family2" class="family-slide">
-              <img src="./photo_5343981950059880315_y.jpg" alt="Oyim" />
-              <a href="#family1" class="family-btn family-prev">‹</a>
-              <a href="#family3" class="family-btn family-next">›</a>
-            </div>
-
-            <!-- 3-RASM -->
-            <div id="family3" class="family-slide">
-              <img src="./photo_5343981950059880326_x.jpg" alt="Akam" />
-              <a href="#family2" class="family-btn family-prev">‹</a>
-              <a href="#family4" class="family-btn family-next">›</a>
-            </div>
-
-            <!-- 4-RASM -->
-            <div id="family4" class="family-slide">
-              <img
-                src="./photo_5389048891572952336_y.jpg"
-                alt="Adam"
-              />
-              <a href="#family"class="family-btn family-prev">‹</a>
-              <a href="#family1"class="family-btn family-next">›</a>
+            <div class="family-card">
+              <img src="./photo_5343981950059880315_y.jpg" alt="Singlim" />
+              <h3>Singlim</h3>
+              <p>Ismi Ezoza.Hozirda 7 yoshda.u maktabga boradi</p>
             </div>
           </div>
 
-         
+          <button class="family-btn next" onclick="nextFamily()">›</button>
         </div>
       </section>
 
+      <script>
+        const track = document.querySelector(".family-track");
+
+        function nextFamily() {
+          track.scrollBy({
+            left: 330,
+            behavior: "smooth",
+          });
+        }
+
+        function prevFamily() {
+          track.scrollBy({
+            left: -330,
+            behavior: "smooth",
+          });
+        }
+      </script>
       <section id="team" class="gc">
         <input type="radio" name="gc" id="gc1" checked />
         <input type="radio" name="gc" id="gc2" />
@@ -324,18 +337,6 @@
           </article>
           <article class="gc-slide">
             <div class="gc-media">
-              <img src="./allayar.PNG" alt="" /><span class="gc-badge">06</span>
-            </div>
-            <div class="gc-body">
-              <span class="gc-tag">GURUHDOSH</span>
-              <h3>Allayar</h3>
-              <p>A'lochi</p>
-            </div>
-            <label class="gc-btn gc-prev" for="gc5">←</label
-            ><label class="gc-btn gc-next" for="gc7">→</label>
-          </article>
-          <article class="gc-slide">
-            <div class="gc-media">
               <img src="./fgkg.PNG" alt="" /><span class="gc-badge">07</span>
             </div>
             <div class="gc-body">
@@ -408,7 +409,11 @@
 
               <!-- 1-loyiha -->
               <div class="title">
-                <img class="imgnn" src="./figma.jpg" alt="Figma loyiham" />
+                <img
+                  class="imgnn"
+                  src="./Streaming figma.jpg"
+                  alt="Figma loyiham"
+                />
 
                 <div class="project-content">
                   <span class="project-label">WEB LOYIHA</span>
@@ -419,7 +424,7 @@
                   </p>
                   <a
                     class="figma-link"
-                    href="https://furniture-project-weld.vercel.app/"
+                    href="https://stream-vib.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -456,7 +461,7 @@
 
               <!-- 3-loyiha -->
               <div class="title">
-                <img class="imgnn" src="./figmaaan.jpg" alt="Uchinchi loyiha" />
+                <img class="imgnn" src="./figma.jpg" alt="Uchinchi loyiha" />
 
                 <div class="project-content">
                   <span class="project-label">WEB LOYIHA</span>
@@ -466,7 +471,7 @@
                   </p>
                   <a
                     class="figma-link"
-                    href="https://figma-flame-nine.vercel.app/"
+                    href=""
                     target="_blank"
                     rel="noopener noreferrer"
                   >
