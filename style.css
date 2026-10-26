@@ -408,7 +408,7 @@ header {
 }
 
 .hero__wrapper {
-    margin-top: 50px;
+  margin-top: 50px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -962,12 +962,10 @@ header {
   z-index: 1;
 }
 
-
-
-.name{
- text-align: center;
- margin-block-end: 30px;
- color: #00ff41;
+.name {
+  text-align: center;
+  margin-block-end: 30px;
+  color: #00ff41;
 }
 .gc input {
   display: none;
